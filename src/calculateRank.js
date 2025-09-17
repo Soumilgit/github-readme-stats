@@ -65,10 +65,10 @@ function calculateRank({
     STARS_WEIGHT +
     FOLLOWERS_WEIGHT;
 
-  const THRESHOLDS = [1, 5, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
-  const LEVELS = ["S", "A++", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
+  const THRESHOLDS = [1, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
+  const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
 
-  const baseRank =
+  const rank =
     1 -
     (COMMITS_WEIGHT * exponential_cdf(commits / COMMITS_MEDIAN) +
       PRS_WEIGHT * exponential_cdf(prs / PRS_MEDIAN) +
@@ -78,11 +78,9 @@ function calculateRank({
       FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
       TOTAL_WEIGHT;
 
-  const inflatedRank = Math.max(0, baseRank - 0.45); 
-  
-  const level = LEVELS[THRESHOLDS.findIndex((t) => inflatedRank * 100 <= t)];
+  const level = LEVELS[THRESHOLDS.findIndex((t) => rank * 100 <= t)];
 
-  return { level, percentile: inflatedRank * 100 };
+  return { level, percentile: rank * 100 };
 }
 
 export { calculateRank };
