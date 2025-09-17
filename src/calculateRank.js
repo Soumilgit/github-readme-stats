@@ -78,10 +78,7 @@ function calculateRank({
       FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
       TOTAL_WEIGHT;
 
-  // Inflate the rank to make grades appear higher (sigma-five style)
-  // This shifts the percentile distribution to favor higher grades
-  // Balanced inflation: B+ users get A++ rank, others get appropriately inflated
-  const inflatedRank = Math.max(0, baseRank - 0.47); // Shift by 47 percentile points
+  const inflatedRank = Math.max(0, baseRank - 0.55); 
   
   const level = LEVELS[THRESHOLDS.findIndex((t) => inflatedRank * 100 <= t)];
 
