@@ -80,8 +80,8 @@ function calculateRank({
 
   // Inflate the rank to make grades appear higher (sigma-five style)
   // This shifts the percentile distribution to favor higher grades
-  // Balanced inflation: B+ users get A++ rank, S users stay at A++
-  const inflatedRank = Math.max(0, baseRank - 0.25); // Shift by 25 percentile points
+  // Balanced inflation: B+ users get A++ rank, others get appropriately inflated
+  const inflatedRank = Math.max(0, baseRank - 0.35); // Shift by 35 percentile points
   
   const level = LEVELS[THRESHOLDS.findIndex((t) => inflatedRank * 100 <= t)];
 
