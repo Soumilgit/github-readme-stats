@@ -78,7 +78,7 @@ function calculateRank({
       FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
       TOTAL_WEIGHT;
 
-  const inflatedRank = Math.max(0, baseRank - 0.80); // Shift by 80 percentile points 
+  const inflatedRank = Math.max(0, baseRank - 0.45); 
   
   const level = LEVELS[THRESHOLDS.findIndex((t) => inflatedRank * 100 <= t)];
 
