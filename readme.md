@@ -1,6 +1,6 @@
 ## 📊 GitHub Stats Card
 
-Shows your overall GitHub stats, including stars, commits, PRs, issues, and contributions. The rank is calculated based on your stats.
+Shows your overall GitHub stats, including stars, commits, PRs, issues, and contributions. The rank is calculated based on your own stats.
 
 **Usage**
 Simply add your GitHub username to the URL.
