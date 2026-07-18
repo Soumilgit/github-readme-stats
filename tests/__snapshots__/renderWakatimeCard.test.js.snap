@@ -23,6 +23,12 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
+          @media (max-width: 768px) {
+            .header { font-size: 20px; }
+          }
+          @media (max-width: 480px) {
+            .header { font-size: 22px; }
+          }
           
     
     .stat {
@@ -31,6 +37,12 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
       .stat { font-size:12px; }
+    }
+    @media (max-width: 768px) {
+      .stat { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .stat { font-size: 18px; }
     }
     .stagger {
       opacity: 0;
@@ -181,6 +193,12 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
+          @media (max-width: 768px) {
+            .header { font-size: 20px; }
+          }
+          @media (max-width: 480px) {
+            .header { font-size: 22px; }
+          }
           
     
     .stat {
@@ -189,6 +207,12 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
       .stat { font-size:12px; }
+    }
+    @media (max-width: 768px) {
+      .stat { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .stat { font-size: 18px; }
     }
     .stagger {
       opacity: 0;
@@ -333,6 +357,12 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
+          @media (max-width: 768px) {
+            .header { font-size: 20px; }
+          }
+          @media (max-width: 480px) {
+            .header { font-size: 22px; }
+          }
           
     
     .stat {
@@ -341,6 +371,12 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
       .stat { font-size:12px; }
+    }
+    @media (max-width: 768px) {
+      .stat { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .stat { font-size: 18px; }
     }
     .stagger {
       opacity: 0;
@@ -485,6 +521,12 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
+          @media (max-width: 768px) {
+            .header { font-size: 20px; }
+          }
+          @media (max-width: 480px) {
+            .header { font-size: 22px; }
+          }
           
     
     .stat {
@@ -493,6 +535,12 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
       .stat { font-size:12px; }
+    }
+    @media (max-width: 768px) {
+      .stat { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .stat { font-size: 18px; }
     }
     .stagger {
       opacity: 0;

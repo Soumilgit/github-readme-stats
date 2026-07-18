@@ -66,7 +66,7 @@ function calculateRank({
     FOLLOWERS_WEIGHT;
 
   const THRESHOLDS = [1, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
-  const LEVELS = ["S", "A++", "A+", "A", "A-", "B+", "B", "B-", "C+"];
+  const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
 
   const baseRank =
     1 -
@@ -78,12 +78,9 @@ function calculateRank({
       FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
       TOTAL_WEIGHT;
 
-  // Apply aggressive inflation by shifting the rank
-  const adjustedRank = Math.max(0, baseRank - 0.50); 
+  const level = LEVELS[THRESHOLDS.findIndex((t) => baseRank * 100 <= t)];
 
-  const level = LEVELS[THRESHOLDS.findIndex((t) => adjustedRank * 100 <= t)];
-
-  return { level, percentile: adjustedRank * 100 };
+  return { level, percentile: baseRank * 100 };
 }
 
 export { calculateRank };

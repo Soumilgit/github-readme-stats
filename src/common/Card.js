@@ -226,6 +226,12 @@ class Card {
             /* Selector detects Firefox */
             .header { font-size: 15.5px; }
           }
+          @media (max-width: 768px) {
+            .header { font-size: 20px; }
+          }
+          @media (max-width: 480px) {
+            .header { font-size: 22px; }
+          }
           ${this.css}
 
           ${process.env.NODE_ENV === "test" ? "" : this.getAnimations()}

@@ -197,6 +197,12 @@ const getStyles = ({
       /* Selector detects Firefox */
       .stat { font-size:12px; }
     }
+    @media (max-width: 768px) {
+      .stat { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .stat { font-size: 18px; }
+    }
     .stagger {
       opacity: 0;
       animation: fadeInAnimation 0.3s ease-in-out forwards;

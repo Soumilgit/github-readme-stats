@@ -915,6 +915,12 @@ const renderTopLanguages = (topLangs, options = {}) => {
       /* Selector detects Firefox */
       .stat { font-size:12px; }
     }
+    @media (max-width: 768px) {
+      .stat { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .stat { font-size: 18px; }
+    }
     .bold { font-weight: 700 }
     .lang-name {
       font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
