@@ -32,17 +32,17 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
           
     
     .stat {
-      font: 600 16px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 15px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:14px; }
+      .stat { font-size:13px; }
     }
     @media (max-width: 768px) {
-      .stat { font-size: 16px; }
+      .stat { font-size: 15px; }
     }
     @media (max-width: 480px) {
-      .stat { font-size: 18px; }
+      .stat { font-size: 15px; }
     }
     .stagger {
       opacity: 0;
@@ -202,17 +202,17 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
           
     
     .stat {
-      font: 600 16px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 15px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:14px; }
+      .stat { font-size:13px; }
     }
     @media (max-width: 768px) {
-      .stat { font-size: 16px; }
+      .stat { font-size: 15px; }
     }
     @media (max-width: 480px) {
-      .stat { font-size: 18px; }
+      .stat { font-size: 15px; }
     }
     .stagger {
       opacity: 0;
@@ -366,17 +366,17 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
           
     
     .stat {
-      font: 600 16px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 15px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:14px; }
+      .stat { font-size:13px; }
     }
     @media (max-width: 768px) {
-      .stat { font-size: 16px; }
+      .stat { font-size: 15px; }
     }
     @media (max-width: 480px) {
-      .stat { font-size: 18px; }
+      .stat { font-size: 15px; }
     }
     .stagger {
       opacity: 0;
@@ -530,17 +530,17 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
           
     
     .stat {
-      font: 600 16px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 15px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:14px; }
+      .stat { font-size:13px; }
     }
     @media (max-width: 768px) {
-      .stat { font-size: 16px; }
+      .stat { font-size: 15px; }
     }
     @media (max-width: 480px) {
-      .stat { font-size: 18px; }
+      .stat { font-size: 15px; }
     }
     .stagger {
       opacity: 0;

@@ -191,17 +191,17 @@ const getStyles = ({
 }) => {
   return `
     .stat {
-      font: 600 16px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+      font: 600 15px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:14px; }
+      .stat { font-size:13px; }
     }
     @media (max-width: 768px) {
-      .stat { font-size: 16px; }
+      .stat { font-size: 15px; }
     }
     @media (max-width: 480px) {
-      .stat { font-size: 18px; }
+      .stat { font-size: 15px; }
     }
     .stagger {
       opacity: 0;
