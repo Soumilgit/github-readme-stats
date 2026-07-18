@@ -218,13 +218,13 @@ class Card {
         <desc id="descId">${this.a11yDesc}</desc>
         <style>
           .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
             fill: ${this.colors.titleColor};
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
             /* Selector detects Firefox */
-            .header { font-size: 15.5px; }
+            .header { font-size: 18px; }
           }
           @media (max-width: 768px) {
             .header { font-size: 20px; }

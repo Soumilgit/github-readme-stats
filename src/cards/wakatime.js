@@ -191,11 +191,11 @@ const getStyles = ({
 }) => {
   return `
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+      font: 600 16px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:12px; }
+      .stat { font-size:14px; }
     }
     @media (max-width: 768px) {
       .stat { font-size: 16px; }
