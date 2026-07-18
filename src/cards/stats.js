@@ -135,20 +135,24 @@ const getStyles = ({
   ringColor,
   show_icons,
   progress,
+  text_size = 15,
+  header_size = 20,
 }) => {
+  const t_size = parseInt(text_size, 10);
+  const h_size = parseInt(header_size, 10);
   return `
     .stat {
-      font: 600 15px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+      font: 600 ${t_size}px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:13px; }
+      .stat { font-size: ${t_size - 2}px; }
     }
     @media (max-width: 768px) {
-      .stat { font-size: 15px; }
+      .stat { font-size: ${t_size}px; }
     }
     @media (max-width: 480px) {
-      .stat { font-size: 15px; }
+      .stat { font-size: ${t_size}px; }
     }
     .stagger {
       opacity: 0;
@@ -260,6 +264,10 @@ const renderStatsCard = (stats, options = {}) => {
     disable_animations = false,
     rank_icon = "default",
     show = [],
+    text_size,
+    header_size,
+    padding_x,
+    padding_y,
   } = options;
 
   const lheight = parseInt(String(line_height), 10);
@@ -417,8 +425,9 @@ const renderStatsCard = (stats, options = {}) => {
 
   // Calculate the card height depending on how many items there are
   // but if rank circle is visible clamp the minimum height to `150`
+  const padY = padding_y !== undefined ? parseInt(padding_y, 10) : 35;
   let height = Math.max(
-    45 + (statItems.length + 1) * lheight,
+    (padY + 10) + (statItems.length + 1) * lheight,
     hide_rank ? 0 : statItems.length ? 150 : 180,
   );
 
@@ -431,6 +440,8 @@ const renderStatsCard = (stats, options = {}) => {
     iconColor,
     show_icons,
     progress,
+    text_size,
+    header_size,
   });
 
   const calculateTextWidth = () => {
@@ -489,6 +500,8 @@ const renderStatsCard = (stats, options = {}) => {
       bgColor,
       borderColor,
     },
+    padding_x,
+    padding_y,
   });
 
   card.setHideBorder(hide_border);

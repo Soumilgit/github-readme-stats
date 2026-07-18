@@ -27,6 +27,9 @@ class Card {
     customTitle,
     defaultTitle = "",
     titlePrefixIcon,
+    padding_x,
+    padding_y,
+    header_size,
   }) {
     this.width = width;
     this.height = height;
@@ -45,8 +48,9 @@ class Card {
 
     this.css = "";
 
-    this.paddingX = 25;
-    this.paddingY = 35;
+    this.paddingX = padding_x !== undefined ? parseInt(padding_x, 10) : 25;
+    this.paddingY = padding_y !== undefined ? parseInt(padding_y, 10) : 35;
+    this.header_size = header_size !== undefined ? parseInt(header_size, 10) : 20;
     this.titlePrefixIcon = titlePrefixIcon;
     this.animations = true;
     this.a11yTitle = "";
@@ -218,19 +222,19 @@ class Card {
         <desc id="descId">${this.a11yDesc}</desc>
         <style>
           .header {
-            font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
+            font: 600 ${this.header_size}px 'Segoe UI', Ubuntu, Sans-Serif;
             fill: ${this.colors.titleColor};
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
             /* Selector detects Firefox */
-            .header { font-size: 18px; }
+            .header { font-size: ${this.header_size - 2}px; }
           }
           @media (max-width: 768px) {
-            .header { font-size: 20px; }
+            .header { font-size: ${this.header_size}px; }
           }
           @media (max-width: 480px) {
-            .header { font-size: 22px; }
+            .header { font-size: ${this.header_size}px; }
           }
           ${this.css}
 

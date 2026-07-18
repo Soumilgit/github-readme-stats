@@ -27,7 +27,7 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
             .header { font-size: 20px; }
           }
           @media (max-width: 480px) {
-            .header { font-size: 22px; }
+            .header { font-size: 20px; }
           }
           
     
@@ -197,7 +197,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
             .header { font-size: 20px; }
           }
           @media (max-width: 480px) {
-            .header { font-size: 22px; }
+            .header { font-size: 20px; }
           }
           
     
@@ -361,7 +361,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
             .header { font-size: 20px; }
           }
           @media (max-width: 480px) {
-            .header { font-size: 22px; }
+            .header { font-size: 20px; }
           }
           
     
@@ -525,7 +525,7 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
             .header { font-size: 20px; }
           }
           @media (max-width: 480px) {
-            .header { font-size: 22px; }
+            .header { font-size: 20px; }
           }
           
     
